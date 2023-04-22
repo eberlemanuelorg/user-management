@@ -1,8 +1,7 @@
 name: List Members and Comment
 
 on:
-  issue_comment:
-    types: [created, edited]
+  workflow_dispatch:
 
 jobs:
   list-members-and-comment:
@@ -10,7 +9,7 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-      - name: List Members and Comment
+      - name: Create summary
         uses: ./
         env:
           GITHUB_TOKEN: ${{ secrets.ORG_TOKEN }}
