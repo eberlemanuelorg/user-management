@@ -1,0 +1,6 @@
+name: 'User management'
+description: 'Grant access for new users in org'
+
+runs:
+  using: 'node16'
+  main: 'index.js'

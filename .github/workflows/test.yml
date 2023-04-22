@@ -1,0 +1,14 @@
+name: List Members and Comment
+
+on:
+  issue_comment:
+    types: [created, edited]
+
+jobs:
+  list-members-and-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List Members and Comment
+        uses: ./
+        env:
+          GITHUB_TOKEN: ${{ secrets.ORG_TOKEN }}
