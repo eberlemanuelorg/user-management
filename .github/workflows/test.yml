@@ -8,6 +8,8 @@ jobs:
   list-members-and-comment:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
       - name: List Members and Comment
         uses: ./
         env:
